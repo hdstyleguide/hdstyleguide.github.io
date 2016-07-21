@@ -1,0 +1,24 @@
+// CONTAINER
+.cartview-items-container {
+	padding: 1em 0;
+}
+
+// CART ITEMS
+.cartview-item {
+	margin: 1em 0;
+	padding: 1em 0;
+	border-bottom: 1px solid color(gray, alto);
+	&:last-of-type {
+		border: 0;
+	}
+	&__img {
+		float: left;
+		width: 50px;
+		height: 50px;
+		margin-right: 20px;
+    text-align: center;
+    img {
+      max-height: 50px;
+    }
+	}
+}

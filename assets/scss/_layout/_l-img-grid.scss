@@ -1,0 +1,76 @@
+.img-grid {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0px 10px;
+	text-align: center;
+	&__title {
+		text-align: center;
+		@include font(secondary);
+		color: color(blue, blumine);
+		@include fz(beta);
+        margin: 0;
+        padding: .5em 0;
+	}
+	&__img {
+		list-style: none;
+		margin: 2px;
+		padding:0px;
+		display: inline-block;
+		width: 95px;
+		height: 95px;
+		border: 2px solid color(gray, mineshaft);
+	}
+}
+.full-screen {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: color(white, white);
+}
+
+// --- Facebook ---//
+.facebook {
+	text-align: center;
+	padding: 20px 0px;
+	h2 {
+		@extend .img-grid__title;
+	}
+}
+.fb-albums-toggle {
+	@extend .btn-primary;
+	@extend .block;
+	font-weight: 400;
+	@include fz(delta);
+	text-align: center;
+	margin: 0px auto;
+}
+#albums {
+	display: none;
+}
+.album-ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	li {
+		cursor: pointer;
+	}
+	.fbAlbum {
+		border: 1px solid color(blue, picton);
+		color: color(blue, picton);
+		padding: 15px;
+		margin: 5px auto;
+		&.selected {
+			color: color(white, white);
+			background: color(blue, picton);
+		}
+	}
+}
+.fbBlock {
+	@extend .img-grid__img;
+}
+ul.clear {
+	margin: 0px;
+	padding: 0px;
+}

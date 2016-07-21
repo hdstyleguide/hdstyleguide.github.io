@@ -1,0 +1,57 @@
+.description-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 0;
+  min-height: 250px;
+  img {
+    width: 100%;
+  }
+  // Define how the image and text are aligned
+  &__visual {
+    @include tablet {
+      width: 40%;
+      order: 2;;
+    }
+    &--left {
+      order: 2;
+      & + .description-block__text {
+        @include tablet {
+          margin: 0 0 0 2rem;
+        }
+      }
+      @include tablet {
+        order: 1;
+      }
+    }
+    &--right {
+      order: 2;
+      & + .description-block__text {
+        @include tablet {
+          margin: 0 2rem 0 0;
+        }
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    order: 1;
+    width: 100%;
+    text-align: center;
+    & > div {
+      @include tablet {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    @include tablet {
+      width: 60%;
+      text-align: left;
+    }
+  }
+  @include tablet {
+    flex-direction: row;
+  }
+}

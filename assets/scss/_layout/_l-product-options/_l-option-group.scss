@@ -1,0 +1,42 @@
+.l-option-group {
+  padding: 1em 0;
+  border-bottom: 1px solid color(gray, alto);
+  &:first-of-type {
+    padding-top: 0;
+  }
+  &__header {
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: ">";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      font-weight: 900;
+      color: color(gray, gray);
+      @include fz(beta);
+      transform: translateY(-50%) translateZ(0) rotate(0deg) scale(.50);
+      transition: all 400ms;
+      transition-timing-function: cubic-bezier(0.5,-1, 0.5, 2);
+    }
+    &--open {
+      &:after {
+        transform: translateY(-50%) translateZ(0) rotate(90deg) scale(.50);
+        color: color(pink, rose);
+      }
+    }
+  }
+  &__body {
+    transition: all 300ms;
+    max-height: 0;
+    overflow: hidden;
+    transition-duration: 300ms;
+    &--open {
+      max-height: 1100px;
+      padding-top: 1em;
+    }
+  }
+  p {
+    margin: 0;
+  }
+}

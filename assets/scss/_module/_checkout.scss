@@ -1,0 +1,64 @@
+.delivery-option {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	padding: 1em 0;
+	border: 1px solid #939393;
+	margin-bottom: .5em;
+	cursor: pointer;
+	> div {
+		width: calc(100% / 3);
+		text-align: center;
+	}
+	&_title {
+		padding-top: 15px;
+		padding-bottom: 3px;
+	}
+	&--selected {
+		border: 1px solid color(blue, picton);
+		&:after {
+			@include absoluteCover;
+	    background-color: rgba(32,180,231,0.2);
+		}
+	}
+}
+/* --- Payment Method --- */
+.payment-method {
+	display: flex;
+	text-align: center;
+	cursor: pointer;
+	&__method {
+		width: 50%;
+		position: relative;
+		padding: .5em 0;
+		border: 1px solid #939393;
+		&--selected {
+			border: 1px solid color(blue, picton);
+			&:after {
+				@include absoluteCover;
+				background-color: rgba(32,180,231,0.2);
+			}
+		}
+	}
+}
+
+.receipt {
+	color: color(blue, blumine);
+	@include font(primary);
+	&_items {
+		border-top: 1px solid color(gray, alto);
+		&--pad-top {
+			padding-top: 20px!important;
+		}
+		&--pad-bottom {
+			padding-bottom: 20px !important;
+		}
+		td {
+			padding: 3px 0px;
+		}
+		&_total {
+			padding:20px 0px !important;
+		}
+	}
+}

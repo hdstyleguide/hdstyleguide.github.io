@@ -1,0 +1,39 @@
+.promo-image {
+  position: relative;
+  padding: 0;
+  height: 30px;
+  overflow: hidden;
+  transition: all ease-in-out 500ms;
+  @include fz(zeta);
+  cursor: pointer;
+  color: color(white, white);
+  &__text {
+    position: relative;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    transition: all ease-in-out 500ms;
+    &--open {
+      padding: 1em 0;
+    }
+  }
+  &__img {
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(/cmsimages/bg-promo-default.jpg);
+    height: 188px;
+    box-shadow: inset 0 8px 8px -8px #000,
+                inset 0 -8px 8px -8px #000;
+    p {
+      @include centerAbsolute;
+    }
+    &:before {
+      @include absoluteCover;
+      background: rgba(0, 0, 0, .25);
+    }
+  }
+  &--open {
+    height: 250px;
+  }
+}

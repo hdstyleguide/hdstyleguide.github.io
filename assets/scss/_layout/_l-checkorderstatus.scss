@@ -1,0 +1,14 @@
+// --- Check Order Status --- //
+.order-status {
+	height:50px;
+	text-align: center;
+	background: color(blue, picton);
+    @include font(primary);
+    font-size: 18px;
+	&__link {
+		color: color(white, white);
+		text-transform: uppercase;
+		text-decoration: none;
+		line-height: 50px;
+	}
+}

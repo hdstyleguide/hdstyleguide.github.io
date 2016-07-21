@@ -1,0 +1,57 @@
+/* --- DEFAUTS --- */
+input[type="text"],
+input[type="tel"],
+select {
+	height: 40px;
+	line-height: 40px;
+	padding: 5px;
+	width: 100%;
+}
+// --- ERROR HANDLING --- //
+.error {
+	border: 1px solid color(pink, rose);
+	color: color(gray, mineshaft);
+	// color: color(pink, rose);
+	@include font(default);
+	&__text {
+		color: color(pink, rose);
+
+		@include fz(zeta);
+		display:block;
+	}
+}
+.l-form-container {
+	margin: 1em;
+	@include tablet {
+		margin:  1em auto;
+		max-width: 75%;
+	}
+	@include desktop {
+		max-width: 50%;
+	}
+}
+input[type="range"] {
+	margin-bottom: 1em;
+	cursor: pointer;
+	width: 100%;
+	max-width: 300px;
+}
+
+.contact-info {
+	@include tablet {
+		display: flex;
+		div {
+			width: 50%;
+		}
+	}
+}
+
+// Fixing IE Placeholder Styling Issues
+input::-ms-input-placeholder,
+input:-ms-input-placeholder {
+	color: color(gray, alto);
+	opacity: 1;
+}
+input::placeholder {
+	color: color(gray, alto);
+}

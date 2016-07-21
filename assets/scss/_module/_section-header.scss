@@ -1,0 +1,19 @@
+.section-header {
+	position: relative;
+	@include fz(epsilon);
+	margin: 1em 0 .5em;
+	text-align: center;
+	color: color(blue, blumine);
+	@include font(primary);
+	@include tablet {
+		@include fz(delta);
+	}
+	&--leftalign {
+		@include tablet {
+			text-align: left;
+		}
+	}
+	&--subheader {
+		@include fz(zeta);
+	}
+}

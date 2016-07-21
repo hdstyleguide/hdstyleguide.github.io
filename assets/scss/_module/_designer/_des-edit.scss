@@ -1,0 +1,25 @@
+.scd-edit {
+  position: absolute;
+  width: 100px;
+  top: 75px;
+  right: 5px;
+  @include tablet {
+    display: none;
+  }
+  &__text {
+    @include fz(zeta);
+    text-align:right;
+    display: block;
+    color: color(blue,blumine);
+    @include font(primary);
+    font-weight: 900;
+    padding: 5px 0;
+  }
+  button {
+    float: right;
+    padding: 5px 5px;
+    @include fz(zeta);
+    color: color(white, white);
+    background: color(pink, rose);
+  }
+}

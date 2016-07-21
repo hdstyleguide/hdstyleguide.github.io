@@ -1,0 +1,16 @@
+.advance {
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: color(white, white);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	.btn-primary {
+		width: 50%;
+	}
+	.price__new {
+		font-size: 1.5em;
+	}
+}

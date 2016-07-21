@@ -1,0 +1,33 @@
+.off-canvas-nav {
+	position: absolute;
+	top: 95px;
+	left: -100vw;
+	transition-duration: .5s;
+	background-color: color(white, white);
+	width: 100vw;
+	height: calc(100vh - 95px);
+	z-index: 50;
+	@include tablet {
+		left: -300px;
+		width: 300px;
+		top: 125px;
+	}
+	&--open {
+		left: 0;
+	}
+	&__link {
+		padding:0px;
+		margin:0px;
+		list-style: none;
+		border-bottom: 1px solid color(gray, alto);
+		padding: 10px 0 10px 10px;
+		display: block;
+		&--button {
+			background-color: color(pink, rose);
+			color: color(white, white);
+		}
+		&--product {
+			padding-left: 30px;
+		}
+	}
+}

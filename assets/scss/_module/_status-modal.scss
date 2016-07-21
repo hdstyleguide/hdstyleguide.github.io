@@ -1,0 +1,17 @@
+.status-modal {
+	&__label {
+		@include fz(eta);
+		color: color(gray, gray);
+		display: block;
+		padding-top: 20px;
+	}
+	&__error {
+		display: block;
+		@include fz(eta);
+		margin: 0px;
+		padding: 0px;
+		&:last-of-type {
+			margin-bottom: 20px;
+		} 
+	}
+}

@@ -1,0 +1,32 @@
+$expand-icon-size: 15px;
+
+.expand-icon {
+	height: $expand-icon-size;
+	width: $expand-icon-size;
+	position: relative;
+	@include tablet {display: none;}
+	&:before,
+	&:after {
+		content: " ";
+		width: $expand-icon-size;
+		height: 3px;
+		background-color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transition-property(all);
+		@include transition-duration(.3s);
+		@include transition-timing-function(cubic-bezier(.42, 0, .58, 1));
+		opacity: 1;
+		border-radius: 2px;
+	}
+	&:before {@include transform(translate(-50%, -50%) rotate(90deg));}
+	&:after {@include transform(translate(-50%, -50%));}
+}
+.expanded {
+	&:before {
+		opacity: 0;
+		@include transform(translate(-50%, -50%) rotate(0deg));
+	}
+	&:after {@include transform(translate(-50%, -50%) rotate(-180deg));}
+}

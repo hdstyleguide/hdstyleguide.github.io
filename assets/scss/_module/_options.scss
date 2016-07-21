@@ -1,0 +1,72 @@
+.option {
+  display: flex;
+	background-color: #e3e3e3;
+	padding: 0px;
+	background-size: cover;
+	background-position: -25px;
+	background-repeat: no-repeat;
+	margin: .5em 0;
+	position: relative;
+	z-index: 8;
+	@include font(primary);
+	@include fz(eta);
+	&_details {
+		color: color(blue, blumine);
+        margin: 0;
+		padding: 5% 0% 5% 55%;
+		z-index: 10;
+		position: relative;
+		&--selected {
+			color: color(white, white);
+		}
+	}
+	&--selected {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+		background-color: rgba(color(blue, blumine), .8);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: color(white, white);
+		z-index: 9;
+		& + p,
+        & + p strong,
+		& + p span {
+			color: color(white, white) !important;
+		}
+	}
+
+	/* --- Background Image Modifiers --- */
+
+	// Framing Options
+	&--standard {background-image: url(img/upsells/border-75.png);}
+	&--gallery {background-image: url(img/upsells/border-15.png); /* NEEDS UPDATE */}
+	&--rolled {background-image: url(img/upsells/rolled.png);}
+	&--frame-black-floating {background-image: url(img/upsells/black-floating.jpg);}
+	&--frame-brown-floating {background-image: url(img/upsells/brown_Frame_copy.png); /* NEEDS UPDATE */}
+
+	// Display Options
+	&--standard-open {background-image: url(img/upsells/standard-open.jpg);}
+	&--dust-cover {background-image: url(img/upsells/dust-cover.jpg);}
+	&--canvas-stand {background-image: url(img/upsells/canvas-stand.jpg);}
+
+	// Image Border
+	&--border-mirror {background-image: url(img/upsells/Standard_Border_copy.png); /* NEEDS UPDATE */}
+	&--border-white {background-image: url(img/upsells/White_Border_copy.png); /* NEEDS UPDATE */}
+	&--border-grey {background-image: url(img/upsells/Grey_Border_copy.png); /* NEEDS UPDATE */}
+	&--border-black {background-image: url(img/upsells/Black_Border_copy.png); /* NEEDS UPDATE */}
+
+	// Color Filter Options
+	&--black-white {background-image: url(img/upsells/black-white.jpg);}
+	&--sepia {background-image: url(img/upsells/sepia.jpg);}
+
+	// Image Retouching
+	&--minor-retouching {background-image: url(img/upsells/minor-retouching.jpg);}
+	&--major-retouching {background-image: url(img/upsells/major-retouching.jpg);}
+
+	// Hanging Options
+	&--wall-mount {background-image: url(img/upsells/wall-mount.jpg);}
+	&--wall-hanging-system {background-image: url(img/upsells/hanger-system.jpg);}
+}
+.same-info {display: inline-block;}

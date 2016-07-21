@@ -1,0 +1,7 @@
+.l-primary {
+  @include tablet {
+    @include span-columns(8);
+    @include clearfix;
+    padding-right: 2em;
+  }
+}

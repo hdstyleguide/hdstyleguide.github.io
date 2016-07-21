@@ -1,0 +1,64 @@
+.l-des-wdis {
+	width: 900px;
+	height: 500px;
+	margin: 0 auto;
+	&__stage {
+		float: left;
+	}
+	&__info {
+		float: left;
+		padding-left: 30px;
+		width: 250px;
+	}
+}
+
+/*TODO: move to scss file and add to styles.css*/
+.scene {
+	position: relative;
+	margin: 35px auto 75px;
+	left: -80px;
+}
+.region {
+	position: absolute;
+	background-color: #D5D5D5;
+	box-shadow: 2px 2px 3px 1px #8D8D8D;
+	cursor: pointer;
+}
+.scene-dimension {
+	position: absolute;
+	font-size: 14px;
+	border: 2px solid #DEDDDA;
+}
+.scene-dimension span {
+	background-color: white;
+	display: inline-block;
+}
+.vertical-dimension {
+	background: url(/cmsimages/ecp-wdis-verticalLine.png) repeat-y;
+	border-width: 2px 0;
+	width: 13px;
+}
+.vertical-dimension span {
+	padding: 20px 0;
+}
+.horizontal-dimension {
+	background: url(/cmsimages/ecp-wdis-horizontalLine.png) repeat-x;
+	border-width: 0 2px;
+	height: 13px;
+}
+.horizontal-dimension span {
+	padding: 0 20px;
+}
+.display-summary {
+	position: absolute;
+	top: 200px;
+	right: 100px;
+	width: 150px;
+}
+.display-summary .button--pink {
+	margin: 1.5em -15px 0 -15px;
+	cursor: pointer;
+}
+.product-type {
+	text-align: center;
+}

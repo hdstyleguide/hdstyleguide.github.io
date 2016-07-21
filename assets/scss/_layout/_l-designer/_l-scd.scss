@@ -1,0 +1,60 @@
+.l-scd {
+	height: calc( 100vh - 95px);
+	position: relative;
+	overflow: hidden;
+	@include tablet {
+		height: calc(100vh - 150px);
+	}
+	&__main {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		right: 0;
+		@include transition-duration(300ms);
+		@include transition-property(all);
+		@include tablet {
+			width: 65%;
+			left: 0;
+		}
+		&--open {
+	    poition: absolute;
+	    right: 85vw;
+	  }
+	}
+	&__sidebar {
+		width: 85vw;
+    padding: 5px 0 45;
+		position: absolute;
+		right: -85vh;
+		background: color(white, white);
+		height: 100%;
+		z-index: 10;
+		pointer-events: none;
+		padding-bottom: 60px;
+		@include tablet {
+			padding-bottom: 0;
+		}
+		@include transition-duration(300ms);
+		@include transition-property(right);
+		&--open {
+			display: block;
+			right: 0;
+      top: 0;
+			pointer-events: all;
+
+		}
+    &--modal {
+        background-color: rgba(0, 0, 0, .75);
+        height: 100vh;
+        position: absolute;
+        right: 85vw;
+        top: 0;
+        width: 15vw;
+        z-index: 15;
+    }
+		@include tablet {
+			right: 0;
+			width: 35%;
+		}
+	}
+}

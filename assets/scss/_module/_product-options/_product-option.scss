@@ -1,0 +1,39 @@
+.product-option {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color(gray, alto);
+  margin-top: .5em;
+  cursor: pointer;
+	font-size: 14px;
+
+	// Framing Options
+	&--standard { background-image: url(/cmsimages/option-depth-75.jpg); }
+	&--gallery { background-image: url(/cmsimages/option-depth-1.5.jpg); }
+	&--rolled { background-image: url(/cmsimages/option-depth-rolled.jpg); }
+	&--frame-black-floating { background-image: url(/cmsimages/option-frame-floating-black.jpg); }
+	&--frame-brown-floating { background-image: url(/cmsimages/option-frame-floating-brown.jpg); }
+	&--frame-black-classic { background-image: url(/cmsimages/option-frame-black.jpg); }
+	&--frame-brown-classic { background-image: url(/cmsimages/option-frame-brown.jpg); }
+
+	// Display Options
+	&--standard-open { background-image: url(/cmsimages/option-display-open.jpg); }
+	&--dust-cover { background-image: url(/cmsimages/option-display-dustcover.jpg); }
+	&--canvas-stand { background-image: url(/cmsimages/option-display-stand.jpg); }
+
+	// Image Retouching
+	&--minor-retouching { background-image: url(img/upsells/minor-retouching.jpg); }
+	&--major-retouching { background-image: url(img/upsells/major-retouching.jpg); }
+
+	// Hanging Options
+	&--wall-mount { background-image: url(/cmsimages/option-hang-single.jpg); }
+	&--wall-hanging-system { background-image: url(/cmsimages/option-hang-multiple.jpg); }
+}
+
+.product-option-circles {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+  &__option {
+    width: 90px;
+  }
+}

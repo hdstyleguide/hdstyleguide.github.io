@@ -1,0 +1,56 @@
+.btn-primary {
+	@include font(primary);
+	transition-duration: 150ms;
+	transition-property: all;
+	background: color(pink, rose);
+	color: color(white, white) !important;
+	border: 0px;
+	padding: 15px 35px;
+	text-transform: uppercase;
+	text-align: center;
+  white-space: nowrap;
+	font-weight: 900;
+	&--disabled {
+		background-color: color(gray, alto) !important;
+	}
+	&:focus,
+	&:active,
+	&:hover {
+		background-color: darken( color(pink, rose), 5% );
+		outline: none;
+	}
+}
+.btn {
+	&--space-around {
+		margin: 2em 0;
+	}
+	&--full {
+		display: block;
+		width: 100%;
+		max-width: none !important;
+	}
+	&--short {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+	}
+	&--blue {
+		background: color(blue, picton);
+	}
+	&--bluedark {
+		background: color(blue, chathams);
+	}
+	&--white {
+		border: 1px solid color(white, white);
+		background-color: inherit;
+		transform: scale(1);
+		&:hover,
+		&:focus,
+		&:active {
+			transform: scale(1.025);
+			background-color: color(blue, blumine);
+		}
+	}
+}

@@ -1,0 +1,82 @@
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(./img/svgs/sprite-payments.svg);
+}
+.i-amex {
+    width: 51px;
+    height: 32px;
+    background-position: 0 0;
+}
+.i-discover {
+    width: 51px;
+    height: 32px;
+    background-position: -96px 0;
+}
+.i-mastercard {
+    width: 51px;
+    height: 32px;
+    background-position: -192px 0;
+}
+.i-paypal {
+    width: 50px;
+    height: 32px;
+    background-position: -288px 0;
+}
+.i-visa {
+    width: 51px;
+    height: 32px;
+    background-position: -384px 0;
+}
+.i-amex--color {
+    width: 51px;
+    height: 32px;
+    background-position: -480px 0;
+}
+.i-discover--color{
+    width: 50px;
+    height: 32px;
+    background-position: -576px 0;
+}
+.i-mastercard--color {
+    width: 51px;
+    height: 32px;
+    background-position: -672px 0;
+}
+.i-paypal--color {
+    width: 50px;
+    height: 32px;
+    background-position: 0 -48px;
+}
+.i-visa--color {
+    width: 51px;
+    height: 32px;
+    background-position: -96px -48px;
+}
+
+.icon--header {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  font-weight: 700;
+  @include fz(zeta);
+  &:first-of-type {
+    margin-left: 30px;
+  }
+  span {
+    margin-right: 5px;
+    height: 25px;
+    line-height: 25px;
+  }
+}
+.icon--question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: color(white, white);
+  color: color(blue, blumine);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  @include fz(epsilon);
+}

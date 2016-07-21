@@ -1,0 +1,11 @@
+.l-footer {
+	text-align: center;
+	&__main {
+		background: color(blue, blumine);
+		padding: 25px 0;
+	}
+	img {
+		width: 50px;
+		margin: 0 10px;
+	}
+}

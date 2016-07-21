@@ -1,0 +1,8 @@
+.l-sidebar {
+  text-align: center;
+  @include tablet {
+    text-align: left;
+    @include span-columns(4);
+    @include clearfix;
+  }
+}

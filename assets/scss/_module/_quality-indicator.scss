@@ -1,0 +1,10 @@
+// Image Quality Indicator
+.quality-indicator {
+	text-align: center;
+	@include font(primary);
+	color: color(blue, blumine);
+	font-weight: bold;
+	&__good {color: green;}
+	&__fair {color: #BFBF18;}
+	&__poor {color: red;}
+}

@@ -1,0 +1,32 @@
+#disable-rotate {
+	display: none;
+}
+
+// @media screen and (orientation:landscape) and (min-aspect-ratio: 13/9) {
+// 	body[disable-rotate] {
+// 		@include transform(rotate(-90deg));
+// 		height: 100vh;
+// 		width: 100vw;
+// 		overflow: hidden;
+// 		position: fixed;
+// 		background: color(blue, picton);
+// 		color: color(white, white) !important;
+// 			#main-container,
+// 			footer,
+// 			questions,
+// 			order-status,
+// 			section {
+// 				display: none;
+// 			}
+// 	}
+// 	#disable-rotate {
+// 		display: block;
+// 		@include transform(rotate(90deg));
+// 		position: fixed;
+// 		height: 100%;
+// 		width: 100%;
+// 		color: color(white, white) !important;
+// 		right: 50%;
+// 		margin-right: -195px;
+// 	}
+// } 

@@ -1,0 +1,38 @@
+.tooltip {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  background: color(blue, picton);
+  color: color(white, white);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  span {
+    background: color(blue,picton);
+    @include fz(eta);
+    width: 200px;
+    line-height: 12px;
+    padding: 10px;
+    left: 50%;
+    position: absolute;
+    bottom: -40px;
+    opacity: 0;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    transform: translateX(-50%);
+    transform-origin: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+  &:hover {
+    span {
+      opacity: 0.9;
+      bottom: 35px;
+      transform: translateX(-50%);
+    }
+  }
+}

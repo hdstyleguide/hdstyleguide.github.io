@@ -1,0 +1,34 @@
+.l-header {
+	@include fz(eta);
+	@include font(primary);
+	position: relative;
+	z-index: 100;
+	background: color(blue, chathams);
+	color: color(white, white);
+	span {
+		cursor: pointer;
+	}
+	&__top {
+		display: none;
+		align-items: center;
+		height: 30px;
+		border-bottom: 1px solid color(blue, picton);
+		@include tablet {
+			display: flex;
+		}
+	}
+	&__main {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 65px;
+		& > div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	&__promo {
+		background: color(blue, picton);
+	}
+}

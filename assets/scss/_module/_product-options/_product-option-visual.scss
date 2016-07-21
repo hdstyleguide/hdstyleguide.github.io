@@ -1,0 +1,45 @@
+.product-option-visual {
+  text-align: center;
+  &__img {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid color(gray, gray);
+    background-position: center center;
+    background-size: 120px;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    &:before {
+      border-radius: 50%;
+    }
+    &--border-mirror {
+      background-image: url(/cmsimages/option-border-none.jpg);
+    }
+    &--black,
+    &--border-black {
+      background: color(black, black);
+    }
+    &--grey,
+    &--border-grey {
+      background: color(gray, gray);
+    }
+    &--white,
+    &--border-white {
+      background: color(white, white);
+    }
+    &--black-white {
+      background-image: url(/cmsimages/option-filter-blackwhite.jpg);
+    }
+    &--sepia {
+      background-image: url(/cmsimages/option-filter-sepia.jpg);
+    }
+    &--no-upsell {
+      background-image: url(/cmsimages/option-filter-none.jpg);
+    }
+  }
+  &__info {
+    font-weight: 700;
+  }
+}

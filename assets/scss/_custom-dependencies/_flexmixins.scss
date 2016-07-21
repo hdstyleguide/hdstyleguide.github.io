@@ -1,0 +1,5 @@
+// FLEX CONTAINER
+@mixin flex-outer-container {
+	@include outer-container;
+	display: flex;
+}

@@ -1,0 +1,8 @@
+.subheader {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+  color: color(blue, blumine);
+  @include font(primary);
+  @include fz(epsilon);
+}

@@ -1,0 +1,43 @@
+/* ===== FUNCTION USED TO RETURN COLOR ===== */
+@function color($color, $tone) {
+	@return map-get(map-get($colors, $color), $tone);
+}
+
+/* ===== MIXIN USED TO DEFINE BACKGROUND COLOR ===== */
+@mixin background-color($color, $tone) {
+    background-color: color($color, $tone);
+}
+
+/* ===== SASS MAP OF ENTIRE COLOR PALETTE ===== */
+$colors: (
+    white: (
+        white: #ffffff
+    ),
+    black: (
+        black: #000000
+    ),
+    blue: (
+        twilight: #f1fbff,
+        picton: #20b4e7,
+				havelock: #4982CF,
+				hippie: #5995AE,
+        blumine: #1e648a,
+				kashmire: #4d6492,
+        chathams: #18506f,
+    ),
+    pink: (
+        rose: #e50085,
+    ),
+    red: (
+        bright: #b20011,
+    ),
+    gray: (
+        gallery: #f0f0f0,
+        alto: #d5d5d5,
+        gray: #939393,
+        mineshaft: #373737
+    ),
+		brown: (
+			birch: #392E25
+		)
+);

@@ -1,0 +1,55 @@
+.ta-left {
+	text-align: left!important;
+}
+.ta-right {
+	text-align: right!important;
+}
+.ta-center {
+	text-align: center!important;
+}
+
+// FONT SIZES
+.alpha {
+	@include fz(alpha);
+}
+.beta {
+	@include fz(beta);
+}
+.gamma {
+	@include fz(gamma);
+}
+.delta {
+	@include fz(delta);
+}
+.epsilon {
+	@include fz(epsilon);
+}
+.zeta {
+	@include fz(zeta);
+}
+.eta {
+	@include fz(eta);
+}
+.theta {
+	@include fz(theta);
+}
+
+// TEXT STYLES
+.underline {
+	text-decoration: underline;
+}
+.linethrough {
+	text-decoration: line-through;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.letter-space-5 {
+	letter-spacing: 5px;
+}
+.bold {
+	font-weight: 700;
+}
+.fw-normal {
+	font-weight: 400;
+}

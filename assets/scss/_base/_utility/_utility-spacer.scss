@@ -1,0 +1,34 @@
+// Space Around
+.space-around--half {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+.space-around {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.space-around--double {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.space-below {
+  margin-bottom: 1em;
+}
+.space-above {
+  margin-top: 1em;
+}
+.line-below {
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 100%;
+    max-width: 500px;
+    background-color: color(gray, alto);
+  }
+}

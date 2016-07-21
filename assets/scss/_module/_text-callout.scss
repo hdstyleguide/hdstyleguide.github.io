@@ -1,0 +1,29 @@
+.text-callout {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: color(white, white);
+  @include tablet {
+    padding: 3rem;
+  }
+  &__title {
+    color: color(white, white);
+  }
+  &--birch {
+    background-color: color(brown, birch);
+  }
+  &--chathams {
+    background-color: color(blue, chathams);
+  }
+  &--blumine {
+    background-color: color(blue, blumine);
+  }
+  &--havelock {
+    background-color: color(blue, havelock);
+  }
+  &--hippie {
+    background-color: color(blue, hippie);
+  }
+  &--kashmire {
+    background-color: color(blue, kashmire);
+  }
+}

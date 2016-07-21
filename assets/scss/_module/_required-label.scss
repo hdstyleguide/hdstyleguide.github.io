@@ -1,0 +1,7 @@
+.required-label {
+	display: block;
+	text-align: center;
+	@include fz(theta);
+	@include font(primary);
+	color: color(gray, gray);
+}

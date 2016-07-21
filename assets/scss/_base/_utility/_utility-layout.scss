@@ -1,0 +1,19 @@
+// ---LAYOUT--- //
+.pull-left {
+  float: left!important;
+}
+.pull-right {
+  float: right!important;
+}
+
+.block-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+.clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}

@@ -1,0 +1,48 @@
+//Breakpoint Values
+$iPhone5: 320px;
+$iPhone6: 375px;
+$iPhone6Plus: 414px;
+
+$smallPhone: 350px;
+$tablet-width: 599px;
+$desktop-width: 1000px;
+$desktop-large-width: 1200px;
+
+@mixin iOS {
+  @media (width: #{$iPhone5}), (width: #{$iPhone6}), (width: #{$iPhone6Plus}) {
+    @content;
+  }
+}
+@mixin iPhone5 {
+  @media (width: #{$iPhone5}) {
+    @content;
+  }
+}
+@mixin smallPhone {
+  @media(max-width: #{$smallPhone}) {
+    @content
+  }
+}
+//Tablet
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+//Desktop
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+//4k / Widescreen devices
+@mixin desktop-large {
+  @media (min-width: #{$desktop-large-width}) {
+    @content;
+  }
+}
+@mixin landscape {
+    @media screen and (orientation:landscape) and (min-aspect-ratio: 13/9) {
+        @content;
+    }
+}

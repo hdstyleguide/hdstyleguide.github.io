@@ -1,0 +1,21 @@
+.l-banner {
+  &__text {
+    text-align: center;
+    padding: 4em 0;
+    padding-bottom: 200px;
+    background-repeat: no-repeat;
+    background-position: center 250px;
+    background-size: 400px;
+    background-image: url(cmsimages/home-framed-canvas.jpg);
+    @include tablet {
+      text-align: left;
+      padding-bottom: 3em;
+      padding-left: 60%;
+      background-position: left center;
+      background-size: 400px;
+    }
+    @include desktop {
+      padding-left: 50%;
+    }
+  }
+}

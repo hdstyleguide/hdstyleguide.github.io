@@ -1,0 +1,26 @@
+.product-option-brief {
+  &__option {
+    cursor: pointer;
+    font-weight: 700;
+    height: 100px;
+  }
+  &__img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 50%;
+    float: left;
+  }
+  &__info {
+    text-align: right;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &--title,
+    &--price {
+      display: block;
+    }
+  }
+}

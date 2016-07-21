@@ -1,0 +1,14 @@
+.logo {
+  width: 160px;
+  margin: 0;
+  cursor: pointer;
+  svg {
+    position: relative;
+    top: 7px;
+    left: 10px;
+    width: 100%;
+  }
+  @include tablet {
+    width: 250px;
+  }
+}

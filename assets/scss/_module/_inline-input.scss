@@ -1,0 +1,29 @@
+.inline-input {
+	max-width: 500px;
+	&__box {
+		width: 65% !important;
+		height: 40px;
+		display: inline-block;
+		margin: 0;
+	}
+	&__btn {
+		float: right;
+		width: 35%;
+		background: color(gray, gray);
+		color: color(white, white);
+		padding: 10px 0px;
+		height: 40px;
+		@include font(primary);
+		text-transform: uppercase;
+		&--active {
+			background: color(pink, rose);
+		}
+	}
+	&__error {
+		color: color(red, bright);
+		@include fz(zeta);
+		text-shadow: color(gray, mineshaft) 1px 1px;
+		display: block;
+		padding: 10px 0px;
+	}
+}

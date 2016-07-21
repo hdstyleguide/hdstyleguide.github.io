@@ -1,0 +1,41 @@
+.l-product-options {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+  &__groups {
+    width: 100%;
+    // margin: 2em .5em .5em .5em;
+    margin-top: 2em;
+    @include tablet {
+      width: 50%;
+      padding-right: 64px;
+      border-right: 1px solid color(gray, gallery);
+    }
+  }
+  &__stage {
+    // position: relative;
+    margin: 0 auto;
+    width: 100%;
+    // background: #eee;
+    @include tablet {
+      order: 2;
+      width: 50%;
+    }
+  }
+}
+
+#cubeBox {
+  margin: 0 auto;
+}
+#cubeContainer {
+  padding: 1em;
+  width: 90%;
+  margin: 0 auto;
+}
+#cubeBox {
+  @include tablet {
+    margin: 3em auto;
+  }
+}

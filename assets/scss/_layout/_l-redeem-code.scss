@@ -1,0 +1,14 @@
+.l-redeem-code {
+    position: relative;
+    padding: 7em 0;
+    background: url(cmsimages/bg-redeem-code.jpg) no-repeat center;
+    background-size: cover;
+    .l-container {
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      @include absoluteCover;
+      background: rgba(0, 0, 0, .4);
+    }
+}

@@ -1,0 +1,75 @@
+.sizes {
+  @include font(primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  h2 {
+    position: relative;
+    z-index: 99;
+  }
+  &__size {
+    @include fz(zeta);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 2;
+    overflow: hidden;
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      padding: 0 15px;
+      flex-grow: 2;
+      pointer-events: all;
+      transition: all 200ms ease-in-out;
+      &:nth-child(odd) {
+        background-color: color(blue, twilight);
+      }
+      &.hidden-sm {
+        display: none;
+      }
+      &:last-of-type {
+        padding-top: 15px;
+      }
+    }
+  }
+  &__info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    .price__old {
+      width: 70px;
+    }
+    .price__new {
+      margin-left: auto;
+    }
+
+  }
+  &__custom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    label {
+      width: 100%;
+      text-align: center;
+    }
+    select {
+      width: 100px;
+    }
+  }
+  // STATE CHANGES
+  &--selected {
+    background: color(blue, picton)!important;
+    transition-duration: 500ms;
+    span {
+      color: color(white, white);
+    }
+  }
+}

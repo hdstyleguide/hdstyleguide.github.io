@@ -1,0 +1,114 @@
+$color1: color(blue, blumine);
+$color2: color(blue, picton);
+$color3: color(pink, rose);
+.loading-indicator {
+	z-index: 9999!important;
+    position: fixed;
+    background: rgba(0, 0, 0, .9);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+@mixin cycle($secs){
+	animation:spin $secs infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes spin{
+	from{-webkit-transform: rotate(0deg);}
+	to{-webkit-transform: rotate(360deg);}
+}
+
+#loadIcon{
+  position: fixed;
+	height: 200px;
+	width: 200px;
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50%);
+	div{
+		position:absolute;
+		&:first-child{
+			height:200px;
+			width:200px;
+			border-radius:140px;
+			border-top:solid 10px $color2;
+			@include cycle(2s);
+		}
+		&:nth-child(2){
+			height:170px;
+			width:170px;
+			border-radius:125px;
+			border-top:solid 10px $color3;
+			top: 15px;
+			left:15px;
+			@include cycle(1.5s);
+		}
+		&:nth-child(3){
+			height:140px;
+			width:140px;
+			border-radius:110px;
+			border-top:solid 10px $color2;
+			top: 30px;
+			left:30px;
+			@include cycle(1s);
+		}
+		&:nth-child(4){
+			height:110px;
+			width:110px;
+			border-radius:95px;
+			border-top:solid 10px $color1;
+			top: 45px;
+			left:45px;
+			@include cycle(.5s);
+		}
+	}
+}
+
+.load-percent {
+  position: fixed;
+	display: inline-block;
+	text-align: center;
+	height: 50px;
+	width: 50px;
+	color: color(white, white);
+	text-shadow: 1px 1px 1px color(gray, mineshaft);
+	@include fz(zeta);
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50%);
+	padding-top: 15px;
+}
+
+// CANVAS CHANGE load-percent
+.canvas-spinner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100% - 70px);
+	width: 100%;
+	background: rgba(0, 0, 0, .3);
+	z-index: 9;
+}
+@keyframes s_rotate1{0%{-webkit-transform:rotate(-360deg)}}
+@keyframes s_rotate2{0%,50%{-webkit-transform:rotate(-360deg)}}
+@keyframes s_grow{0%{stroke-dashoffset:0;}}
+.spinner{
+	margin: 35vh auto 0;
+	top: 50%;
+  width:3rem;
+  height:3rem;
+  animation: s_rotate1 4.5s infinite linear;
+	svg{
+	  animation: s_rotate2 2s infinite linear;
+	}
+	path{
+	  fill: none;
+	  stroke:#ff458b;
+	  stroke-width: 18;
+	  stroke-dasharray: 600;
+	  stroke-dashoffset:580;
+	  animation: s_grow 1s alternate infinite linear;
+	}
+}

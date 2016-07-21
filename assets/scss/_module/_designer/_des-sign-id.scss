@@ -1,0 +1,12 @@
+.sign-id {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  @include fz(eta);
+}
+.bleed-callout {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  @include fz(eta); 
+}

@@ -1,0 +1,19 @@
+.l-outer-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.l-inner-container {
+  position: relative;
+  width: 100%;
+  right: 0;
+  transition: all 300ms;
+  overflow: hidden;
+  &--open {
+    transform: translateX(-80%);
+    @include tablet {
+      transform: translateX(-350px);
+
+    }
+  }
+}

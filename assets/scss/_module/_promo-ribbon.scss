@@ -1,0 +1,23 @@
+.promo-ribbon {
+  @include font(primary);
+  @include fz(eta);
+  padding: 5px 0;
+  transform: rotate(-40deg);
+  text-transform: uppercase;
+  font-weight: 900;
+  position: absolute;
+  top: 30px;
+  left: -45px;
+  text-align: center;
+  width: 200px;
+  background: color(pink, rose);
+  color: color(white, white);
+  &--wdis {
+    top: 30px;
+    left: -60px;
+  }
+  &--option {
+    top: 10px;
+    left: -70px;
+  }
+}

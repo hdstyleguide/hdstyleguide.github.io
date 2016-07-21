@@ -1,0 +1,42 @@
+.des-tooltip {
+	@include fz(theta);
+	@include font(primary);
+	font-weight: 900;
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	z-index:9;
+	pointer-events: none;
+	@include transform(translate(-50%, -50%));
+	span {
+		display: inline-block;
+		background: rgba(255, 255, 255, .75);
+		border: 1px solid #333;
+		padding: 5px 10px;
+		background-position: 5px center;
+		background-size: 20px;
+		background-repeat: no-repeat;
+		pointer-events: auto;
+	}
+  & .tooltip--upload {
+    background-image: url(img/icons/tooltips/upload.svg);
+  }
+  & .tooltip--drag {
+    background-image: url(img/icons/tooltips/drag.svg);
+  }
+  & .tooltip--enlarge {
+    background-image: url(img/icons/tooltips/enlarge.svg);
+  }
+
+	&--hidden {
+		display: none;
+	}
+	@include tablet {
+		@include fz(epsilon);
+	}
+	@include transition-property(all);
+	@include transition-duration(300ms);
+}

@@ -1,0 +1,19 @@
+.scd {
+	&[ng-controller="shoppingCartController"] {
+		height: initial;
+		&[ng-app="checkout"] {background: color(white, white);}
+	}
+}
+
+[current-state="crop"] {
+    height: 100%;
+}
+
+[current-state="options"] {
+    .l-scd {display: none;}
+    & + .marketingcallout {display:none;}
+    .advance {
+			padding: 1.5em 0;
+			position: initial;
+		}
+}

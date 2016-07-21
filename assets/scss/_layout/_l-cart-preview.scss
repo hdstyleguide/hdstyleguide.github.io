@@ -1,0 +1,24 @@
+.l-cart-preview {
+  color: color(gray, mineshaft);
+  @include font(primary);
+  height: 100vh;
+  width: 80%;
+  max-width: 350px;
+  padding: 20px;
+  background: color(white, white);
+  position: absolute;
+  z-index: 999;
+  right: -100%;
+  top: 0;
+  text-align: left;
+  transition: right 300ms;
+  &:before {
+    display: block;
+    content: "My Cart";
+    font-weight: 900;
+    @include fz(beta);
+  }
+  &--open {
+    right: 0;
+  }
+}

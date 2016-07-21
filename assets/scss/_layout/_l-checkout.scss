@@ -1,0 +1,24 @@
+.l-checkout {
+	display: flex;
+	&__main {
+		@include tablet {
+			width: 70%;
+			padding-right: 1em;
+		}
+		@include desktop {
+		 width: 60%;
+		}
+	}
+	&__sidebar {
+		display: none;
+		@include tablet {
+			display: inline-block;
+			padding-left: 1em;
+			width: 30%;
+		}
+		@include desktop {
+			width: 40%;
+			padding-left: 1em;
+		}
+	}
+}

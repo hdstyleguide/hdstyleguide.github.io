@@ -1,0 +1,14 @@
+.terms {
+	@include fz(eta);
+	color: color(gray, mineshaft);
+	&__revised {
+		color: color(gray, alto);
+		@include fz(theta);
+		text-align: center;
+	}
+	&__section-header {
+		color: color(blue, blumine);
+		@include fz(zeta);
+		@include font(primary);
+	}
+}

@@ -1,0 +1,18 @@
+.page-title {
+	@include fz(gamma);
+	@include font(secondary);
+	color: color(blue, blumine);
+	font-weight: 400;
+	margin: 10px;
+	text-align: center;
+	@include tablet {
+		@include fz(beta);
+		margin: 1rem 0;
+	}
+	&--absolute {
+		position: absolute;
+		width: 100%;
+	} &--white {
+		color: color(white, white);
+	}
+}

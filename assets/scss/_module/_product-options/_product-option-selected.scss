@@ -1,0 +1,12 @@
+.product-option-selected {
+  border-color: color(blue, picton) !important;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparentize(color(blue, picton), .8);
+  }
+}

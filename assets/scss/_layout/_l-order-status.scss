@@ -1,0 +1,11 @@
+.status-container {
+	@include font(primary);
+	text-align: center;
+}
+.status-item {
+	padding: 20px 0px;
+	&__name {
+		@include fz(delta);
+		color: color(blue, blumine);
+	}	
+}

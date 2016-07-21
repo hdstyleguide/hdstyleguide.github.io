@@ -1,0 +1,46 @@
+.wdis {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background: color(gray, gallery);
+	padding: 5px;
+	margin: 0 auto 2.35765% 0;
+	max-width: 90%;
+	height: auto;
+	border: 1px solid transparent;
+	transition-property: all;
+	transition-duration: 150ms;
+	cursor: pointer;
+	@include fz(theta);
+	&__title {
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-transform: uppercase;
+	}
+	&__img {
+		padding: 0;
+		text-align: center;
+		height: 70%;
+		img {
+			width: 100%;
+		}
+	}
+	&__info {
+		text-align: center!important;
+	}
+	@include desktop {
+		@include span-columns(4);
+		@include omega(3n);
+		height: 350px;
+	}
+	&:hover {
+		border: 1px solid color(blue, picton);
+		transform: scale(1.025);
+	}
+}
+
+// Designer
+[ng-app="wallDisplayDesigner"] {
+	min-height: 600px;
+}

@@ -1,0 +1,69 @@
+/* === MODULAR SCALE === */
+$modular-scale: (
+  mobile: (
+    alpha:   67.34,
+    beta:    50.517,
+    gamma:   37.897,
+    delta:   28.43,
+    epsilon: 21.328,
+    zeta:    16.0,
+    eta:     12.003,
+    theta:   9.005,
+  ),
+  tablet: (
+    alpha:   71.548,
+    beta:    53.675,
+    gamma:   40.266,
+    delta:   30.207,
+    epsilon: 22.661,
+    zeta:    17.0,
+    eta:     12.75,
+    theta:   9.567,
+  ),
+  desktop: (
+    alpha:   79.966,
+    beta:    59.989,
+    gamma:   45.003,
+    delta:   33.761,
+    epsilon: 25.327,
+    zeta:    19.0,
+    eta:     14.254,
+    theta:   10.693,
+  )
+);
+
+$breakpoints: (
+  mobile: 0px,
+  tablet: 768px,
+  desktop: 1000px,
+);
+
+@mixin fz($size, $breakpoint: all) {
+  @if $breakpoint == all {
+    @each $current-breakpoint, $v in $breakpoints {  
+      @include breakpoint($v) {
+        font-size: fzGet($current-breakpoint, $size);
+      }
+    }
+  }
+  @else {
+    font-size: fzGet($breakpoint, $size);
+  }
+}
+
+@function fzGet($br, $sz) {
+  @return map-get(map-get($modular-scale, $br), $sz) / map-get(map-get($modular-scale, $br), zeta) * 1rem;
+}
+
+@each $brk, $brv in $breakpoints {
+    @include breakpoint($brv) {
+        body {
+            font-size: map-get(map-get($modular-scale, $brk), zeta) * 1px;
+        }
+        @each $k, $font-size in map-get($modular-scale, $brk) {
+          .fz-#{$k} {
+            font-size: fzGet($brk, $k);
+          }
+        }
+    }
+}

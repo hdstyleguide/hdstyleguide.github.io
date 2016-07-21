@@ -1,0 +1,29 @@
+.picton {
+  color: color(blue, picton);
+}
+.blumine {
+	color: color(blue, blumine);
+}
+.gallery {
+  color: color(gray, gallery);
+}
+.pink {
+  color: color(pink, rose)!important;
+}
+.red {
+  color: color(red, bright);
+}
+.mineshaft {
+  color: color(gray, mineshaft);
+}
+.gray {
+  color: color(gray, gray);
+}
+.white {
+  color: color(white, white);
+  &:hover,
+  &:active,
+  &:focus {
+    color: color(white, white);
+  }
+}

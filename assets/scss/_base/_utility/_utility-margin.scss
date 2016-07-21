@@ -1,0 +1,28 @@
+.margin-none {
+  margin: 0!important;
+}
+
+.margin-auto {
+  &--left {
+    margin-left: auto;
+  }
+  &--right {
+    margin-right: auto;
+  }
+}
+
+.margin-all-20 {
+  margin: 20px;
+}
+.margin-all-5 {
+  margin: 5px;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-left-20 {
+  margin-left: 10px;
+}

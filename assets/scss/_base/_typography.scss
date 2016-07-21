@@ -1,0 +1,36 @@
+
+body {
+	@include font(primary);
+}
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+	@include font(primary);
+	@include fz(delta);
+	color: color(blue, blumine);
+	margin-bottom: 20px;
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+
+p {
+	margin: 0 0 10px 0;
+	@include font(primary);
+}
+a{
+	cursor: pointer;
+}
+.pointer {
+	cursor: pointer;
+}

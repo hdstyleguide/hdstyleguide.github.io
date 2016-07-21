@@ -1,0 +1,40 @@
+.l-modal {
+	@include centerAbsolute;
+	transform: translate(-50%, -50%) scale(2);
+	width: 100%;
+	background: color(white, white);
+	z-index: 999;
+	padding: 3em;
+	text-align: center;
+	opacity: 0;
+	transition: all 300ms ease-in-out;
+	max-height: 75vh;
+	overflow-y: auto;
+	@include tablet {
+		width: 75%;
+	}
+	@include desktop {
+		width: 50%;
+	}
+	&__head {
+		@include font(secondary);
+		@include fz(delta);
+		color: color(blue, blumine);
+		margin-bottom: 30px;
+	}
+	&__body {
+		margin-bottom: 30px;
+        color: #373737;
+	}
+	&__footer {
+
+	}
+	&--open {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+[modal-show="upload-modal"] {
+	cursor: pointer;
+}

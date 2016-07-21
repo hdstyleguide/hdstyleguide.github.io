@@ -1,0 +1,16 @@
+.info-icon {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	background: color(blue, picton);
+	color: color(white, white);
+	line-height: 25px;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	&--top-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}

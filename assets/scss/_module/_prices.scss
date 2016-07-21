@@ -1,0 +1,29 @@
+.price {
+	@include font(primary);
+	&__subtotal {
+		color: color(gray, alto);
+		font-weight: 900;
+		@include fz(delta);
+	}
+	&__old {
+		@include fz(eta);
+		color: color(gray, gray);
+		text-decoration: line-through;
+		line-height: 30px;
+	}
+	&__new {
+		font-weight: 900;
+		font-size: 1.5em;
+		color: color(pink, rose);
+		&--small {
+			@include fz(epsilon);
+		}
+	}
+	&--vertical {
+		display: flex;
+		flex-direction: column;
+	}
+	&--right {
+		text-align: right;
+	}
+}
