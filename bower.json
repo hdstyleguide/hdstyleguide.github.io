@@ -1,0 +1,23 @@
+{
+  "name": "ECP",
+  "description": "EasyCanvasPrints Dependencies",
+  "main": "gulpfile.js",
+  "authors": [
+    "ECP"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "compass-breakpoint": "breakpoint-sass#~2.6.1",
+    "Cortana": "~1.2.9",
+    "sassy-maps": "^0.4.0"
+  }
+}
